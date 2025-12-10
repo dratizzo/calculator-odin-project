@@ -20,13 +20,18 @@ function divide(num1, num2) {
 
 let digitButtons = document.querySelectorAll(".numbers-clear div div p");
 
-let firstValue = '0';
+let currentValue = document.querySelector('.display-calculator p')
 
-digitButtons.forEach(item) => {
+let newValue = ''
+
+digitButtons.forEach((digit) => {
     digit.addEventListener('click', () => {
         // vai concatenando o  valor
+        newValue += digit.textContent;
+        currentValue.textContent = newValue;
+        // return 
     });
-}
+});
 
 // 1 + 3 - 5 * 8 + 1
 
