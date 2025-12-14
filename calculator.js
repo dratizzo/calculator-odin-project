@@ -63,6 +63,12 @@ digitButtons.forEach((digit) => {
     });
 });
 
+// ao fazer a operaçao tem que descelecionar o operador, mas sem operatorSelection == '')
+// pois se não atualiza o valor atual e soma dígitos nele, então após essa primeira operação
+// de alguma forma precisa começar a atualizar sempre o segundo
+
+// talvez atualizar funções para retornar string 
+
 // Lê cliques nos botões de operadores
 operatorsDigitButtons.forEach((operator) => {
     operator.addEventListener('click', () => {
